@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="/javascripts/angular.min.js"></script>
+  </head>
+  <body ng-app="puppyApp">
+
+    <div ng="puppyCtrl">
+      <input type="checkbox" ng-model="puppy">
+      <label>{{puppy}}</label>
+      <input type="text" ng-model="puppy.name"></input>
+      <button ng-click="">clickme</button>
+
+      <div ng-repeat="puppy in puppies">
+        <h1>{{puppy.image}}</h1>
+        <p>
+          {{puppy.note}}
+        </p>
+        <p>
+          {{puppy.image}}
+        </p>
+        <p>
+          {{puppy.name}}
+        </p>
+      </div>
+
+      <button ng-click="getPuppies()">Get Puppies</button>
+    </div>
+
+
+
+
+
+
+
+    <script src="/javascripts/angular/app.js"></script>
+    <script src="/javascripts/angular/controllers/main.js"></script>
+    <script src="/javascripts/angular/directives/puppy.js"></script>
+  </body>
+</html>
